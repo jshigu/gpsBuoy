@@ -12,6 +12,7 @@
 		90E823B42BC42F8500C9F680 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E823B32BC42F8500C9F680 /* ContentView.swift */; };
 		90E823B62BC42F8700C9F680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E823B52BC42F8700C9F680 /* Assets.xcassets */; };
 		90E823B92BC42F8700C9F680 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E823B82BC42F8700C9F680 /* Preview Assets.xcassets */; };
+		90E823C42BC4320700C9F680 /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E823C32BC4320700C9F680 /* MapModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		90E823B32BC42F8500C9F680 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90E823B52BC42F8700C9F680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E823B82BC42F8700C9F680 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90E823C32BC4320700C9F680 /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		90E8239F2BC42F8400C9F680 = {
 			isa = PBXGroup;
 			children = (
+				90E823C32BC4320700C9F680 /* MapModels.swift */,
 				90E823B02BC42F8500C9F680 /* gpsBuoy Watch App */,
 				90E823A72BC42F8500C9F680 /* Products */,
 			);
@@ -194,6 +197,7 @@
 			files = (
 				90E823B42BC42F8500C9F680 /* ContentView.swift in Sources */,
 				90E823B22BC42F8500C9F680 /* gpsBuoyApp.swift in Sources */,
+				90E823C42BC4320700C9F680 /* MapModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = gpsBuoy;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,6 +369,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = gpsBuoy;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -36,11 +36,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 longitude: $0.coordinate.longitude)
             
             // 地図を表示するための領域を再構築
-            region = MKCoordinateRegion(
-                center: center,
-                latitudinalMeters: 100.0,
-                longitudinalMeters: 100.0
-            )
+//            region = MKCoordinateRegion(
+//                center: center,
+//                latitudinalMeters: 500.0,
+//                longitudinalMeters: 500.0
+//            )
         }
     }
     
@@ -52,15 +52,27 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 latitude: location.coordinate.latitude,
                 longitude: location.coordinate.longitude
             )
-            
-            pointList[bouyNo] = Point(latitude: location.coordinate.latitude , longitude: location.coordinate.longitude )
-            
-            region = MKCoordinateRegion(
-                center: center,
-                latitudinalMeters: 100.0,
-                longitudinalMeters: 100.0
-            )
+
+            if bouyNo == 0 || bouyNo == 1 || bouyNo == 2 {
+                //GPSブイ投下を記録
+                pointList[bouyNo] = Point(
+                    name: "No.\(bouyNo + 1)",
+                    latitude: location.coordinate.latitude ,
+                    longitude: location.coordinate.longitude
+                )
+                region = MKCoordinateRegion(
+                    center: center,
+                    latitudinalMeters: 50.0,
+                    longitudinalMeters: 50.0
+                )
+            } else {
+                //ロケーションボタン
+                region = MKCoordinateRegion(
+                    center: center,
+                    latitudinalMeters: 200.0,
+                    longitudinalMeters: 200.0
+                )
+            }
         }
     }
-    
 }
